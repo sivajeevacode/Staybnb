@@ -8,6 +8,7 @@
     list-style-type: none;
     scroll-behavior: smooth;
 }
+
 /* head */
 .head
 {
@@ -18,6 +19,7 @@
     background-position: center;
     background-size: cover;
     padding: 15px 7%;
+    position: relative;
 }
 .head nav{
     display: flex;
@@ -65,7 +67,7 @@ nav .reg
 .head .content
 {
     text-align: center;
-    margin:15% 0;
+    margin:10% 0;
     padding: 0 10%;
 }
 .head .content h1
@@ -98,7 +100,7 @@ nav .reg
     font-size: 18px;
     padding: 0 10px;
     border-right: 1px solid #494848;
-    width: 200px;
+    width:150px;
 }
 .search-bar form div input.last
 {
@@ -356,6 +358,114 @@ nav .fa-bars
     display: none;
 }
 
+
+/* overlay effect - if pop up show */
+.overlay
+{
+    background-color:black;
+    opacity: 0.9;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left:50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    z-index:1;
+    display: none;
+}
+.over
+{
+    display: block;
+}
+/* pop up reg */
+.pop
+{
+    position:absolute;
+    background-color: #fff;
+    width: 300px;
+    height: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 10px 30px;
+    display: none;
+    border-radius: 10px;
+    z-index: 2;
+}
+.pop h2
+{
+    text-align: center;
+    color: #0cca4a;
+}
+.pop form 
+{
+    margin-top: 20px;
+}
+.pop form div
+{
+    padding: 10px 0;
+
+}
+.pop form div input
+{
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color:#333;
+    padding: 10px 30px;
+    font-size: 17px;
+    position: relative;
+    color: #fff;
+}
+.pop form div i
+{
+    position: absolute;
+    z-index: 100;
+    padding: 15px 8px;
+    color: #fff;
+}
+.pop .reg
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  background-color: #0cca4a;
+  padding: 15px 30px;
+  border-radius: 10px;
+  font-weight: 700;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 10px;
+  font-size: 18px;
+}
+.pop .fa-xmark
+{
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  right: 20px;
+  top: 15px;
+  color: rgb(245, 6, 6);
+  cursor: pointer;
+  font-size: 25px;
+}
+.show
+{
+    display: block;
+}
+#msg
+{
+    color: #0cca4a;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
 /* responsive */
 @media (max-width:700px) {
     .head
@@ -446,7 +556,6 @@ nav .fa-bars
         margin: 30px 0;
     
     }
-
     .banner .content
     {
         position: absolute;

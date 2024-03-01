@@ -15,7 +15,7 @@
 </head>
 <body>
     <!-- StayBnb Website Project | siva -->
-
+    
     <!-- header -->
     <div class="head" id="head">
         <nav id="navbar">
@@ -25,9 +25,12 @@
                 <li><a href="">Travel Outside</a></li>
                 <li><a href="">Online Packages</a></li>
             </ul>
-            <a href="" class="reg">Register Now</a>
+            <a href="" class="reg" id="reg">Register Now</a>
             <i class="fa-solid fa-bars" onclick="togglebtn()"></i>
         </nav>
+
+        <span id="msg"></span>
+
         <div class="content">
             <h1>Journey To <br> Explore World</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
@@ -51,6 +54,29 @@
                     </button>
                 </form>
             </div>
+        </div>
+       
+        <div class="overlay" id="over"></div>
+        
+        <!-- pop up reg -->
+        <div class="pop" id="pop">
+            <h2>Register Here</h2>
+            <i class="fa-solid fa-xmark" id="close"></i>
+            <form>
+                <div>
+                    <i class="fa-solid fa-user"></i>
+                    <input type="text" placeholder="Name" required id="input">
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <input type="email" placeholder="Email" required id="input">
+                </div>
+                <div>
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="password" placeholder="Password" required id="input">
+                </div>
+            </form>
+            <button class="reg" id="ok" >Register</button>
         </div>
     </div>
 
@@ -218,6 +244,7 @@
     <div class="footer">
         <p>Copyright &#169; 2024 <span> Staybnb</span> inc.</p>
     </div>
+    
     <!-- js link -->
     <script src="main.js"></script>
 </body>
